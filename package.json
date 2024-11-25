@@ -1,0 +1,20 @@
+{
+  "name": "fitri-puspitasari.github.io",
+  "version": "1.0.0",
+  "description": "portofolio-website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fitri-puspitasari/fitri-puspitasari.github.io.git"
+  },
+  "author": "fitri-puspitasari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fitri-puspitasari/fitri-puspitasari.github.io/issues"
+  },
+  "homepage": "https://github.com/fitri-puspitasari/fitri-puspitasari.github.io#readme",
+  "type": "module"
+}
