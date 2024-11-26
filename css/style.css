@@ -37,8 +37,12 @@ body {
     font-family: var(--slim-font);
 }
 
-.home__learn-about-text {
-    font-family: var(--slim-font);
+h2 {
+    font-family: var(--game-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline solid var(--blue);
+    text-decoration-thickness: 0.313rem;
 }
 
 /* ||-------- HOME */
@@ -61,8 +65,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
 
 .home-container {
     position: absolute;
@@ -125,7 +127,70 @@ main {
     border: var(--border-content);
     width: calc(100vh - (2 * var(--margin-y-content)));
     height: calc(100vh - (2 * var(--margin-y-content)));
+    padding: 1.875rem;
 }
+
+
+/* ||-------- MAIN CONTENT SKILLS */
+.skills-and-experiences {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skills-and-experiences h2 {
+    margin-bottom: 3.875rem;
+}
+
+.skills__anim-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.skills__logos-with-ghost {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.skills__logos {
+    display: flex;
+    gap: 2.688rem;
+}
+
+.skills__logos img {
+    height: 6.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills__logos figcaption {
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: bold;
+}
+
+.experiences__lists li {
+    font-size: 1.375rem;
+    list-style-type: none;
+    padding-left: 3.438rem;
+    background-image: url("../assets/images/rectangle.png");
+    background-size: 1.25rem;
+    background-repeat: no-repeat;
+    background-position-y: 0.125rem;
+}
+
+.experiences__lists li:last-child {
+    font-size: 1.25rem;
+    background-image: none;
+}
+
+.experiences__lists span {
+    display: block;
+    margin-left: 3rem;
+}
+
 
 /* ||-------- MAIN SIDE-MENU */
 .side-menu {
