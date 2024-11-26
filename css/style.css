@@ -48,7 +48,6 @@ body {
     background-image: url("../assets/images/pacman.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-position-y: top; */
 
 }
 .home {
@@ -67,16 +66,9 @@ body {
 
 .home-container {
     position: absolute;
-    /* top: 0;
-    left: 0; */
     width: 100%;
     max-width: 1255px;
-    /* background-color: rgba(0, 0, 0, 0.9); */
-
     height: calc(100vh - 11.938rem - 3.438rem);
-    /* margin-inline: auto; */
-    /* margin-top: 11.938rem;
-    margin-bottom: 3.438rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -101,10 +93,6 @@ body {
     font-size: 2.625rem;
 }
 
-/* .home__learn-more-container {
-    
-} */
-
 .home__buttons-container {
     margin-top: 2rem;
     display: flex;
@@ -115,5 +103,63 @@ body {
     background-color: transparent;
     border: none;
     margin-bottom: 1.188rem;
+}
+
+
+/* ||-------- MAIN */
+main {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--black);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ||-------- MAIN CONTENT */
+.content {
+    border: var(--border-content);
+    width: calc(100vh - (2 * var(--margin-y-content)));
+    height: calc(100vh - (2 * var(--margin-y-content)));
+}
+
+/* ||-------- MAIN SIDE-MENU */
+.side-menu {
+    width: var(--max-width-side-menu);
+}
+
+.side-menu li {
+    list-style: none;
+    width: 15.625rem;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+}
+
+.side-menu button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+/* ||-------- FOOTER */
+footer {
+    position: relative;
+    top: calc(50vh - (4 * 2.5rem) - (2 * 1.5rem));
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
 }
 
