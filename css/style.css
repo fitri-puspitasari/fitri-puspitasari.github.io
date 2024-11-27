@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scrollbar-width: thin;
     box-sizing: border-box;
 }
 
@@ -18,7 +19,9 @@
 
     /* SIZE */
     --margin-y-content: 30px;
-    --border-content: 20px solid var(--blue);
+    --border-content-weight: 20px;
+    --border-content: var(--border-content-weight) solid var(--blue);
+    --padding-content: 1.875rem;
     --max-width-side-menu: 24rem;
 }
 
@@ -27,6 +30,8 @@ body {
     color: var(--white);
     font-family: var(--general-font);
     background-color: var(--black);
+    scrollbar-color: var(--blue) transparent;
+
 }
 
 .game-text {
@@ -127,7 +132,7 @@ main {
     border: var(--border-content);
     width: calc(100vh - (2 * var(--margin-y-content)));
     height: calc(100vh - (2 * var(--margin-y-content)));
-    padding: 1.875rem;
+    padding: var(--padding-content);
 }
 
 
@@ -192,6 +197,25 @@ main {
 }
 
 
+/* ||-------- MAIN CONTENT PROJECTS */
+.projects {
+    width: 100%;
+}
+
+.projects h2 {
+    margin-bottom: 5.188rem;
+}
+
+.projects__folders {
+    height: calc(100vh - (2 * (var(--margin-y-content) + var(--border-content-weight) + var(--padding-content))) - 2rem - 5.188rem);
+    /* overflow-y: scroll; */
+    display: flex;
+    gap: 4.616rem;
+    flex-wrap: wrap;
+}
+
+
+
 /* ||-------- MAIN SIDE-MENU */
 .side-menu {
     width: var(--max-width-side-menu);
@@ -228,3 +252,9 @@ footer a {
     text-decoration: none;
 }
 
+
+
+/* --------for testing */
+.skills-and-experiences {
+    display: none;
+}
