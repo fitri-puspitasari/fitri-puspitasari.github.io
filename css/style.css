@@ -146,6 +146,7 @@ main {
 /* ||-------- MAIN CONTENT SKILLS */
 .skills-and-experiences {
     height: 90%;
+    max-height: 777px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -304,7 +305,55 @@ main {
 }
 
 
+/* ||-------- MAIN CONTENT ABOUT */
+.about {
+    height: 100%;
+}
 
+.about article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 88%;
+    max-height: 760px;
+}
+
+.about h2 {
+    /* margin-bottom: 7.25rem; */
+}
+
+.about__detail {
+    display: flex;
+    gap: 2.813rem;
+}
+
+.about__detail-img {
+    width: 14.938rem;
+    border: 6px solid var(--blue);
+    border-radius: 5px;
+}
+
+.about__detail-text {
+    font-size: 1.375rem;
+}
+
+.about__contact h4 {
+    font-family: var(--game-font);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.about__contact__social-media-icons {
+    width: 300px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__contact__contact-icon {
+    width: 1.977rem;
+    display: none;
+}
 
 
 
@@ -348,7 +397,11 @@ footer a {
 
 
 /* --------for testing */
-.skills-and-experiences,
-.projects {
+/* main */
+/* .skills-and-experiences, */
+.projects,
+.project-detail,
+.about 
+{
     display: none;
 }
