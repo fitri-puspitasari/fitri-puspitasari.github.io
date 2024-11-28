@@ -50,6 +50,13 @@ h2 {
     text-decoration-thickness: 0.313rem;
 }
 
+h3 {
+    font-family: var(--game-font);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
 /* ||-------- HOME */
 .home__bg {
     width: 100vw;
@@ -215,6 +222,92 @@ main {
 }
 
 
+/* ||-------- MAIN CONTENT PROJECT-DETAIL */
+.project-detail {
+    height: calc(100% + 38px);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-detail__preview-images {
+    width: 350px;
+    height: max-content;
+    /* border: 1px solid red; */
+}
+
+.project-detail__preview-images img {
+    width: 319px;
+    display: block;
+    margin-inline: auto;
+    margin-block: 5px;
+    padding: 3px;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+}
+
+.project-detail__preview-images__buttons {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.project-detail__preview-images__buttons > * {
+    width: 10px;
+    height: 10px;
+    border: none;
+}
+
+.project-detail__preview-images__buttons button:first-child {
+    background-color: var(--yellow);
+}
+
+.project-detail__article p {
+    margin-bottom: 1rem;
+    text-indent: 3.125rem;
+    font-size: 1.25rem;
+}
+
+.project-detail__table {
+    font-size: 1.125rem;
+    text-align: center;
+    padding-top: 0;
+    border-spacing: 1rem;
+}
+
+.project-detail__table th,
+.project-detail__table td {
+    width: max-content;
+}
+
+.project-detail__table span {
+    display: block;
+}
+
+.project-detail__links a {
+    color: var(--blue);
+    font-size: 1.375rem;
+    font-family: var(--game-font);
+    text-decoration: none;
+}
+
+.project-detail__exit-button {
+    background-color: transparent;
+    border: none;
+    align-self: self-end;
+    position: relative;
+    bottom: 100%;
+    left: 15px;
+}
+
+
+
+
+
+
 
 /* ||-------- MAIN SIDE-MENU */
 .side-menu {
@@ -255,6 +348,7 @@ footer a {
 
 
 /* --------for testing */
-.skills-and-experiences {
+.skills-and-experiences,
+.projects {
     display: none;
 }
