@@ -5,11 +5,13 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitri Puspitasari | Portofolio</title>
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <!-- style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
 </head>
 <body>
     <!-- ------HOME------ -->
@@ -79,17 +81,17 @@
                                     <figcaption>Phaser.js</figcaption>
                                 </figure>
                             </div>
-                            <img class="pacman pacman-ghost-eatable" src="./assets/images/pacman_ghost_eatable.png" alt="pacman_ghost_eatable">
+                            <!-- <img class="pacman pacman-ghost-eatable" src="./assets/images/pacman_ghost_eatable.png" alt="pacman_ghost_eatable"> -->
                         </div>
-                        <img class="pacman pacman-yellow-pacman" src="./assets/images/pacman_pacman.png" alt="pacman">
+                        <!-- <img class="pacman pacman-yellow-pacman" src="./assets/images/pacman_pacman.png" alt="pacman"> -->
                     </div>
                 </article>
                 <article class="experiences">
                     <h2>My Experiences</h2>
                     <ul class="experiences__lists">
-                        <li>November 2020 sd December 2021 <span>Quality Content - PT. Media Ajar Indonesia</span></li>
-                        <li>December 2021 sd February 2022 <span>Junior Programmer - PT. Media Ajar Indonesia</span></li>
-                        <li>March 2022 sd November 2022 <span>HTML5 Game Developer - PT. Quamus Global Academy</span></li>
+                        <li>November 2020 sd December 2021 <span>Quality Content<span>PT. Media Ajar Indonesia</span></span></li>
+                        <li>December 2021 sd February 2022 <span>Junior Programmer<span>PT. Media Ajar Indonesia</span></span></li>
+                        <li>March 2022 sd November 2022 <span>HTML5 Game Developer<span>PT. Quamus Global Academy</span></span></li>
                         <li>note: PT. Media Ajar Indonesia and PT. Quamus Global Academy are owned by the same owner</li>
                     </ul>
                 </article>
@@ -164,31 +166,40 @@
                 </div>
                 <article class="project-detail__article">
                     <h3>Quamus Academy</h3>
-                    <p>Quamus Arabic is an Arabic learning platform with the Mustaqilli Method. Quamus Arabic provides learning media in the form of videos, games, exercises, quizzes and fill-in-the-blank exercise sheets. In addition, Quamus Arabic also provides bonuses in the form of vocabulary applications from Q.S. Al-Baqarah, shalah readings, and du'a readings that can be accessed for free.</p>
-                    <p>As an HTML5 game developer, I collaborate with a team to develop games and exercises to evaluate students' understanding, as well as develop vocabulary applications.</p>
-
+                    <div class="project-detail__article__p-container">
+                        <p>Quamus Arabic is an Arabic learning platform with the Mustaqilli Method. Quamus Arabic provides learning media in the form of videos, games, exercises, quizzes and fill-in-the-blank exercise sheets. In addition, Quamus Arabic also provides bonuses in the form of vocabulary applications from Q.S. Al-Baqarah, shalah readings, and du'a readings that can be accessed for free.</p>
+                        <p>As an HTML5 game developer, I collaborate with a team to develop games and exercises to evaluate students' understanding, as well as develop vocabulary applications.</p>
+                    </div>
                 </article>
-                <table class="project-detail__table">
-                    <thead>
-                        <tr>
-                            <th>Year</th>
-                            <th>Role</th>
-                            <th>Tools</th>
-                            <th>Language & Framework</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2021 - 2022</td>
-                            <td>HTML5 Game Developer</td>
-                            <td>Visual Studio Code,<span>Adobe Animate (for slicing assets)</span></td>
-                            <td>Javascript, Phaser.js</td>
-                        </tr>
-                        <tr>
-                            <!-- <td>Adobe Animate (for slicing assets)</td> -->
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="project-detail__long-table">
+                    <p class="thead thead-year">Year</p>
+                    <p class="thead thead-role">Role</p>
+                    <p class="thead thead-tools">Tools</p>
+                    <p class="thead thead-langnframe">Language & Framework</p>
+                    <p class="tbody tbody-year">2021 - 2022</p>
+                    <p class="tbody tbody-role">HTML5 Game Developer</p>
+                    <p class="tbody tbody-tools">Visual Studio Code,<span class="block-text">Adobe Animate (for slicing assets)</span></p>
+                    <p class="tbody tbody-langnframe">Javascript,<span class="block-text">Phaser.js</span></p>
+                </div>
+                <div class="project-detail__short-table">
+                    <div class="short-table__year">
+                        <button class="thead thead-year">Year</button>
+                        <p class="tbody tbody-year">2021 - 2022</p>
+                    </div>
+                    <div class="short-table__role">
+                        <button class="thead thead-role">Role</button>
+                        <p class="tbody tbody-role">HTML5 Game Developer</p>
+                    </div>
+                    <div class="short-table__tools">
+                        <button class="thead thead-tools">Tools</button>
+                        <p class="tbody tbody-tools">Visual Studio Code,<span class="block-text">Adobe Animate (for slicing assets)</span></p>
+                    </div>
+                    <div class="short-table__langnframe">
+                        <button class="thead thead-langnframe">Language & Framework</button> 
+                        <p class="tbody tbody-langnframe">Javascript,<span class="block-text">Phaser.js</span></p>
+                    </div>
+                </div>
+
                 <div class="project-detail__links">
                     <a href="https://quamus.id/">Check out the live web here!</a>
                 </div>
@@ -201,7 +212,9 @@
                 <article>
                     <h2>About Me</h2>
                     <div class="about__detail">
-                        <img class="about__detail-img" src="./assets/images/contact/about-photo.png" alt="fitri-puspitasari">
+                        <div class="about__detail-img">
+                            <!-- <img src="./assets/images/contact/about-photo.png" alt="fitri-puspitasari"> -->
+                        </div>
                         <div class="about__detail-text">
                             <p>Hi there!</p>
                             <p>My name is Fitri Puspitasari. I currently live in Bandung, Indonesia. I found programming to be one of my passions. I love being immersed in the logic and problem-solving process when dealing with code. It makes me excited and challenged.</p>
@@ -216,7 +229,9 @@
                             <a href="https://discord.com/users/762517638156910602"><img src="./assets/images/contact/discord-logo.png" alt="discord"></a>
                             <a href="https://www.instagram.com/fitripus132/"><img src="./assets/images/contact/instagram-logo.png" alt="instagram-logo"></a>
                         </div>
-                        <img class="about__contact__contact-icon" src="./assets/images/contact/contact-icon.png" alt="">
+                        <button class="about__contact__contact-button">
+                            <img class="about__contact__contact-icon" src="./assets/images/contact/contact-icon.png" alt="">
+                        </button>
                     </div>
                 </article>
             </section>
