@@ -1,0 +1,41 @@
+@import url('./style.css');
+@import url('./style-laptop.css');
+
+@media screen and (max-width: 768px) {
+    .home-container h1 {
+        font-size: 3rem;
+    }
+    .home__highlight-text {
+        font-size: 1.9rem;
+    }
+    .home-container p {
+        font-size: 1.3rem;
+    }
+    .home__button-container img {
+        width: 55px;
+    }
+
+    .skills-and-experiences {
+        height: 100%;
+        max-height: max-content;
+        gap: 3.722rem;
+    }
+    .experiences__lists {
+        height: fit-content;
+    }
+
+    .project-detail__article__p-container {
+        height: calc(var(--height-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 21rem);
+    }
+    .project-detail__short-table button:focus + p {
+        opacity: 1;
+    }
+
+    .side-menu button {
+        font-size: 1.8rem;
+        width: 275px;
+    }
+    .side-menu li {
+        width: max-content;
+    }
+}

@@ -97,7 +97,6 @@ button {
 
 .home-container h1 {
     font-size: 4.5rem;
-    /* margin-bottom: 5.5rem; */
 }
 
 .home-container p {
@@ -147,8 +146,6 @@ main {
 /* ||-------- MAIN CONTENT */
 .content {
     border: var(--border-content);
-    /* width: calc(100vh - (2 * var(--margin-y-content)));
-    height: calc(100vh - (2 * var(--margin-y-content))); */
     width: var(--width-content);
     height: var(--width-content);
     padding: var(--padding-content);
@@ -185,6 +182,12 @@ main {
 .skills__logos {
     display: flex;
     gap: 2.688rem;
+}
+
+.skills__logos figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skills__logos img {
@@ -247,7 +250,8 @@ main {
 }
 
 .folder-project img {
-    margin-bottom: 1rem;
+    display: block;
+    margin: 0 auto 1rem;
 }
 
 
@@ -264,7 +268,6 @@ main {
 .project-detail__preview-images {
     width: 350px;
     height: max-content;
-    /* border: 1px solid red; */
 }
 
 .project-detail__preview-images img {
@@ -378,14 +381,11 @@ main {
     }
 }
 
-.project-detail__short-table button:hover + p,
-.project-detail__short-table button:focus + p {
+.project-detail__short-table button:hover + p {
     opacity: 1;
 }
 
-/* .project-detail__short-table button:not(:focus) + p {
-    opacity: 0;
-} */
+
 
 .project-detail__short-table {
     display: none;
@@ -430,10 +430,8 @@ main {
 }
 
 .about__detail-img {
-    /* flex-basis: 16rem; */
     flex-shrink: 0;
     width: 16rem;
-    /* width: 25%; */
     border: 6px solid var(--blue);
     border-radius: 5px;
     background-image: url('../assets/images/contact/about-photo.png');
@@ -524,8 +522,6 @@ footer a {
         position: relative;
         bottom: 2.5rem;
     }
-    
-
 }
 
 @media screen and (orientation: portrait) and (max-width: 900px) {
@@ -544,31 +540,47 @@ footer a {
 @media screen and (orientation: portrait) {
     :root {
         --width-content: calc(100vw - (2 * var(--margin-y-content)));
-        
+        --height-content: 65vh;
+        /* --height-content: calc(100vh - (3 * var(--margin-y-content)) - 30vh) */
     }
-
+    
     main {
         flex-direction: column;
-        justify-content: start;
+        justify-content: space-between;
         padding-block: var(--margin-y-content);
+        gap: 0 !important;
+    }
 
+    .content {
+        height: var(--height-content);
+        /* height: calc(100vh - (3 * var(--margin-y-content)) - 30vh); */
+
+    }
+
+    .about__detail {
+        display: flex !important;
+        flex-direction: row !important;
+        margin-top: 1.611rem;
+        gap: 1rem;
+    }
+    .about__detail-img {
+        float: none !important;
     }
 
     .side-menu {
-        margin-top: var(--margin-y-content);
-        height: calc(100vh - (3 * var(--margin-y-content)) - var(--width-content));
+        height: fit-content;
+        width: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-
     .side-menu li {
         width: max-content;
         margin-bottom: 1rem;
+        text-wrap: nowrap;
     }
     
     .side-menu button {
-        font-size: 2.1rem;
         width: 100%;
     }
 
@@ -577,32 +589,15 @@ footer a {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .project-detail__long-table button {
-        text-decoration: underline;
-    }
-    .project-detail__long-table tbody {
-        display: none;
-    }
-    /* tablet belum beres semua */
-}
-
-
 
 
 /* --------for testing */
-/* main */
-/* .skills-and-experiences, */
+main
+/* .skills-and-experiences,
 .projects,
-.project-detail,
-.about 
+.project-detail
+.about  */
 {
     display: none;
 }
 
-
-
-/* ---------- Belum bagus responsive nya */
-/* 1280 x 720 
-.project-detail
-.about */
