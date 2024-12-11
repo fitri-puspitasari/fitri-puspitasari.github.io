@@ -11,8 +11,17 @@
     .home-container p {
         font-size: 1.3rem;
     }
-    .home__button-container img {
+    .home__button-container button,
+    .home__button-container div {
         width: 55px;
+    }
+    .pacman-ghost,
+    .yellow-pacman {
+        width: 55px;
+        height: 55px;
+    }    
+    .home__button-container p {
+        opacity: 1;
     }
 
     .skills-and-experiences {
@@ -25,7 +34,7 @@
     }
 
     .project-detail__article__p-container {
-        height: calc(var(--height-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 21rem);
+        /* height: calc(var(--height-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 21rem); */
     }
     .project-detail__short-table button:focus + p {
         opacity: 1;

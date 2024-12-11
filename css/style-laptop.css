@@ -30,8 +30,15 @@
     .home-container p {
         font-size: 1.4rem;
     }
-    .home__button-container img {
+    .home__button-container button,
+    .home__button-container div,
+    .yellow-pacman {
         width: 65px;
+    }
+    .pacman-ghost {
+        width: 65px;
+        height: 65px;
+        /* background-size: cover; */
     }
 
     
@@ -92,12 +99,19 @@
         width: 229.6px;
         height: max-content;
     }
-    .project-detail__preview-images img {
+    .project-detail__preview-images:first-child {
         width: 209px;
         margin-block: 5px;
         padding: 3px;
+        /* border: 2px solid var(--blue);
+        border-radius: 5px; */
+    }
+    .project-detail__preview-images img {
+        /* width: 209px;
+        margin-block: 5px;
+        padding: 3px;
         border: 2px solid var(--blue);
-        border-radius: 5px;
+        border-radius: 5px; */
     }
     .project-detail__preview-images__buttons {
         width: fit-content;
@@ -118,7 +132,8 @@
         font-size: 1.111rem;
     }
     .project-detail__article__p-container {
-        height: calc(var(--width-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 21rem);
+        /* height: calc(var(--width-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 21rem); */
+        height: fit-content;
         overflow-y: auto;
         margin-bottom: 10px;
     }
@@ -134,13 +149,6 @@
             font-size: 1rem;
         }
     }
-    .short-table__langnframe {
-        width: 172px;
-        & > p {
-            bottom: 82px;
-            left: 45px;
-        }
-    }
     .project-detail__links a {
         font-size: 1rem;
         position: relative;
@@ -149,8 +157,8 @@
     .project-detail__exit-button {
         width: 15px;
         height: 15px;
-        bottom: calc(100% + 15px);
-        left: 0px;
+        /* bottom: calc(100% + 15px);
+        left: 0px; */
         & > img {
             width: 15px;
         }
@@ -195,6 +203,5 @@
 
     footer p {
         font-size: 1rem;
-        /* font-weight: 200; */
     }
 }

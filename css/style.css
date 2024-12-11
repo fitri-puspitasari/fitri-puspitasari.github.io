@@ -3,6 +3,7 @@
     padding: 0;
     scrollbar-width: thin;
     box-sizing: border-box;
+    /* cursor: grab, move !important; */
 }
 
 :root {
@@ -32,7 +33,7 @@ body {
     font-family: var(--general-font);
     background-color: var(--black);
     scrollbar-color: var(--blue) transparent;
-
+    overflow: hidden;
 }
 
 .game-text {
@@ -60,6 +61,11 @@ h3 {
 
 button {
     cursor: pointer;
+}
+
+
+.hidden {
+    display: none !important;
 }
 
 /* ||-------- HOME */
@@ -126,6 +132,74 @@ button {
 .home__button-container p {
     color: var(--blue);
     opacity: 0;
+}
+
+.pacman-ghost {
+    width: 71px;
+    height: 71px;
+    background-size: cover;
+}
+
+@keyframes ghost-squish {
+    0% {
+        transform: scaleY(1) translateY(0)
+    }
+    50% {
+        transform: scaleY(0.9) translateY(10%)
+    }
+    100% {
+        transform: scaleY(1) translateY(0)
+    }
+}
+
+.squishable:hover {
+    animation-name: ghost-squish;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ghost-run {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(calc(100vw + 71px))}
+}
+
+@keyframes ghost-run-foot {
+    0% {background-image: url('../assets/images/pacman_ghost_eatable.png')}
+    50% {background-image: url('../assets/images/pacman_ghost_eatable_run.png')}
+}
+
+@keyframes pacman-run {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(calc(100vw + 71px))}
+}
+
+@keyframes main-run {
+    0% {transform: translateX(calc(-100% - 71px))}
+    100% {transform: translateX(0)}
+}
+
+@keyframes pacman-eat {
+    0% {background-image: url('../assets/images/pacman_pacman.png')}
+    50% {background-image: url('../assets/images/pacman_pacman_eat.png')}
+}
+
+
+.yellow-pacman {
+    width: 71px;
+    height: 71px;
+    background-image: url('../assets/images/pacman_pacman.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 30px;
+    left: -71px;
+    transform: translateX(-71px);
+}
+
+.pacman-eat {
+    animation-name: pacman-eat;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+
 }
 
 
@@ -237,29 +311,41 @@ main {
 }
 
 .projects h2 {
-    margin-bottom: 5.188rem;
+    margin-bottom: 4.188rem;
 }
 
 .projects__folders {
+    padding: 1rem;
     height: calc(var(--width-content) - (2 * (var(--border-content-weight) + var(--padding-content))) - 2rem - 5.188rem);
-    /* overflow-y: scroll; */
+    overflow-y: auto;
     display: flex;
     gap: 4.616rem;
     flex-wrap: wrap;
     font-size: 1.25rem;
 }
 
-.folder-project img {
+.folder-project button {
     display: block;
     margin: 0 auto 1rem;
+    background-color: transparent;
+    border: none;
+} 
+
+.folder-project img {
+    transition: all 0.5 ease-out;
+}
+
+.folder-project img:hover {
+    transform: scale(1.2);
 }
 
 
 /* ||-------- MAIN CONTENT PROJECT-DETAIL */
 .project-detail {
+    width: 100%;
     height: calc(100% + 38px);
     padding-top: 2rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -270,11 +356,23 @@ main {
     height: max-content;
 }
 
-.project-detail__preview-images img {
+.project-detail__preview-images:first-child {
     width: 319px;
     display: block;
     margin-inline: auto;
     margin-block: 5px;
+    padding: 3px;
+    /* border: 2px solid var(--blue);
+    border-radius: 5px; */
+}
+
+.project-detail__preview-images img {
+    width: 100%;
+    height: 100%;
+    /* width: 319px;
+    display: block;
+    margin-inline: auto;
+    margin-block: 5px; */
     padding: 3px;
     border: 2px solid var(--blue);
     border-radius: 5px;
@@ -293,9 +391,9 @@ main {
     border: none;
 }
 
-.project-detail__preview-images__buttons button:first-child {
+/* .project-detail__preview-images__buttons button:first-child {
     background-color: var(--yellow);
-}
+} */
 
 .project-detail__article p {
     margin-bottom: 1rem;
@@ -317,7 +415,7 @@ main {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(4, max-content);
-    gap: 10px 15px;
+    gap: 5px 10px;
     margin-inline: auto;
 }
 
@@ -350,45 +448,17 @@ main {
     font-weight: 500;
 }
 
-
-.short-table__year {
-    width: 37px;
-    & > p {
-        bottom: 60px;
-        right: 35px;
-    }
-}
-
-.short-table__role {
-    width: 38px;
-    & > p {
-        bottom: 60px;
-        right: 80px;
-    }
-}
-.short-table__tools {
-    width: 42px;
-    & > p {
-        bottom: 82px;
-        right: 120px;
-    }
-}
-.short-table__langnframe {
-    width: 193px;
-    & > p {
-        bottom: 82px;
-        left: 45px;
-    }
-}
-
 .project-detail__short-table button:hover + p {
     opacity: 1;
 }
 
-
-
 .project-detail__short-table {
     display: none;
+}
+
+.project-detail__links {
+    display: flex;
+    gap: 15px;
 }
 
 .project-detail__links a {
@@ -396,6 +466,7 @@ main {
     font-size: 1.375rem;
     font-family: var(--game-font);
     text-decoration: none;
+    margin-top: 1rem;
     &:hover {
         color: var(--yellow);
     }
@@ -404,10 +475,7 @@ main {
 .project-detail__exit-button {
     background-color: transparent;
     border: none;
-    align-self: self-end;
-    position: relative;
-    bottom: 100%;
-    left: 15px;
+    /* align-self: self-end; */
 }
 
 
@@ -489,7 +557,7 @@ main {
     font-size: 2.5rem;
     width: 100%;
     &:hover {
-        color: var(--yellow);
+        color: var(--yellow) !important;
     }
 }
 
@@ -592,12 +660,12 @@ footer a {
 
 
 /* --------for testing */
-main
+/* main */
 /* .skills-and-experiences,
 .projects,
-.project-detail
-.about  */
+.project-detail,
+.about 
 {
     display: none;
-}
+} */
 

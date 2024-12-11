@@ -32,21 +32,24 @@
                     <p class="slim-text">Learn more about me!</p>
                     <div class="home__buttons-container">
                         <div class="home__button-container">
-                            <button type="button">
-                                <img src="./assets/images/pacman_cyan_ghost.png" alt="Skills & Experiences">
+                            <button id="ghost-button-0" type="button">
+                                <div class="pacman-ghost squishable"></div>
+                                <!-- <img class="pacman-ghost squishable" src="./assets/images/pacman_cyan_ghost.png" alt="Skills & Experiences"> -->
                             </button>
                             <p class="slim-text">Skills &</p>
                             <p class="slim-text">Experiences</p>
                         </div>
                         <div class="home__button-container">
-                            <button type="button">
-                                <img src="./assets/images/pacman_pink_ghost.png" alt="Project">
+                            <button id="ghost-button-1" type="button">
+                                <div class="pacman-ghost squishable"></div>
+                                <!-- <img class="pacman-ghost squishable" src="./assets/images/pacman_pink_ghost.png" alt="Project"> -->
                             </button>
                             <p class="slim-text">Project</p>
                         </div>
                         <div class="home__button-container">
-                            <button type="button">
-                                    <img src="./assets/images/pacman_red_ghost.png" alt="About">
+                            <button id="ghost-button-2" type="button">
+                                <div class="pacman-ghost squishable"></div>
+                                <!-- <img class="pacman-ghost squishable" src="./assets/images/pacman_red_ghost.png" alt="About"> -->
                             </button>
                             <p class="slim-text">About</p>
                         </div>
@@ -55,12 +58,14 @@
             </div>
         </div>
     </header>
+    
+    <div class="yellow-pacman"></div>
 
     <!-- ------MAIN------ -->
     <main>
         <!-- ------CONTENT------ -->
         <div class="content">
-            <section class="skills-and-experiences">
+            <section class="skills-and-experiences content-0">
                 <article class="skills">
                     <h2>My Skills</h2>
                     <div class="skills__anim-container">
@@ -99,122 +104,15 @@
                 </article>
             </section>
 
-            <section class="projects">
+            <section class="projects content-1">
                 <h2>My Projects</h2>
                 <div class="projects__folders">
-                    <div class="folder-project project-1">
-                        <img src="./assets/images/projects/folder-project1.png" alt="folder-project1">
-                        <p>Quamus Academy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>Website Portofolio</p>
-                    </div>
-                    
-                    <!-- <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>Website Portofolio</p>
-                    </div> -->
-                    <!-- <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div>
-                    <div class="folder-project project-2">
-                        <img src="./assets/images/projects/folder-project2.png" alt="folder-project1">
-                        <p>dummy</p>
-                    </div> -->
                 </div>
             </section>
 
-            <section class="project-detail">
-                <div class="project-detail__preview-images">
-                    <img src="./assets/images/projects/project1-1.png" alt="project1-1">
-                    <div class="project-detail__preview-images__buttons">
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                        <button></button>
-                    </div>
-                </div>
-                <article class="project-detail__article">
-                    <h3>Quamus Academy</h3>
-                    <div class="project-detail__article__p-container">
-                        <p>Quamus Arabic is an Arabic learning platform with the Mustaqilli Method. Quamus Arabic provides learning media in the form of videos, games, exercises, quizzes and fill-in-the-blank exercise sheets. In addition, Quamus Arabic also provides bonuses in the form of vocabulary applications from Q.S. Al-Baqarah, shalah readings, and du'a readings that can be accessed for free.</p>
-                        <p>As an HTML5 game developer, I collaborate with a team to develop games and exercises to evaluate students' understanding, as well as develop vocabulary applications.</p>
-                    </div>
-                </article>
-                <div class="project-detail__long-table">
-                    <p class="thead thead-year">Year</p>
-                    <p class="thead thead-role">Role</p>
-                    <p class="thead thead-tools">Tools</p>
-                    <p class="thead thead-langnframe">Language & Framework</p>
-                    <p class="tbody tbody-year">2021 - 2022</p>
-                    <p class="tbody tbody-role">HTML5 Game Developer</p>
-                    <p class="tbody tbody-tools">Visual Studio Code,<span class="block-text">Adobe Animate (for slicing assets)</span></p>
-                    <p class="tbody tbody-langnframe">Javascript,<span class="block-text">Phaser.js</span></p>
-                </div>
-                <div class="project-detail__short-table">
-                    <div class="short-table__year">
-                        <button class="thead thead-year">Year</button>
-                        <p class="tbody tbody-year">2021 - 2022</p>
-                    </div>
-                    <div class="short-table__role">
-                        <button class="thead thead-role">Role</button>
-                        <p class="tbody tbody-role">HTML5 Game Developer</p>
-                    </div>
-                    <div class="short-table__tools">
-                        <button class="thead thead-tools">Tools</button>
-                        <p class="tbody tbody-tools">Visual Studio Code,<span class="block-text">Adobe Animate (for slicing assets)</span></p>
-                    </div>
-                    <div class="short-table__langnframe">
-                        <button class="thead thead-langnframe">Language & Framework</button> 
-                        <p class="tbody tbody-langnframe">Javascript,<span class="block-text">Phaser.js</span></p>
-                    </div>
-                </div>
+            <section class="project-detail-container"></section>
 
-                <div class="project-detail__links">
-                    <a href="https://quamus.id/">Check out the live web here!</a>
-                </div>
-                <button class="project-detail__exit-button">
-                    <img src="./assets/images/x-button.png" alt="exit-button">
-                </button>
-            </section>
-
-            <section class="about">
+            <section class="about content-2">
                 <article>
                     <h2>About Me</h2>
                     <div class="about__detail">
@@ -247,10 +145,10 @@
         <div class="side-menu">
             <nav>
                 <ul>
-                    <li><button class="side-menu__home game-text">Home</button></li>
-                    <li><button class="side-menu__skills game-text">Skills & Experiences</button></li>
-                    <li><button class="side-menu__projects game-text">Projects</button></li>
-                    <li><button class="side-menu__about game-text">About</button></li>
+                    <li><button class="side-menu__home game-text menu-button">Home</button></li>
+                    <li><button class="side-menu__skills game-text content-button">Skills & Experiences</button></li>
+                    <li><button class="side-menu__projects game-text content-button">Projects</button></li>
+                    <li><button class="side-menu__about game-text content-button">About</button></li>
                 </ul>
             </nav>
             <!-- ------FOOTER------ -->
@@ -258,8 +156,9 @@
                 <p>&#64; <a href="https://github.com/fitri-puspitasari">Fitri Puspitasari</a> 2024</p>
             </footer>
         </div>
-
     </main>
 
+
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>
