@@ -55,7 +55,7 @@
     } */
     .skills-and-experiences h2,
     .experiences h2 {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.25rem;
     }
     .skills__logos {
         width: calc(var(--width-content) - (2 * var(--padding-content)) - (2 * var(--border-content-weight)));

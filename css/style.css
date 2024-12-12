@@ -237,12 +237,14 @@ main {
     max-height: 777px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: start;
+    gap: 4rem;
 }
 
 .skills-and-experiences h2,
 .experiences h2 {
-    margin-bottom: 3.875rem;
+    margin-bottom: 2.75rem;
 }
 
 .skills__anim-container {
@@ -293,11 +295,13 @@ main {
     background-size: 1.25rem;
     background-repeat: no-repeat;
     background-position-y: 0.125rem;
+    margin-bottom: 0.8rem;
 }
 
 .experiences__lists li:last-child {
     font-size: 1.25rem;
     background-image: none;
+    
 }
 
 .experiences__lists li > span {

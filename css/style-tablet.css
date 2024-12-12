@@ -27,7 +27,7 @@
     .skills-and-experiences {
         height: 100%;
         max-height: max-content;
-        gap: 3.722rem;
+        gap: 2rem;
     }
     .experiences__lists {
         height: fit-content;

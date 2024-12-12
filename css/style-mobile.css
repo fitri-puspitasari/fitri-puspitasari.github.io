@@ -67,7 +67,7 @@
 @media screen and (((orientation: portrait) and (max-width: 480px)) or ((orientation: landscape) and (max-height: 480px))) {
     :root {
         --margin-y-content: 17px;
-        --border-content-weight: 10px;
+        --border-content-weight: 7px;
         --padding-content: 8px;
         --max-width-side-menu: 16rem;
     }
