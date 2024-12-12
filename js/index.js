@@ -14,6 +14,7 @@ const menuButton = document.querySelector('.menu-button');
 export let activeContentIndex = null;
 let isPGhostDynamic = true;
 
+
 // media query
 function changePGhost(x) {
     isPGhostDynamic = !x.matches
@@ -23,6 +24,7 @@ changePGhost(mqTabletMobile);
 mqTabletMobile.addEventListener("change", function() {
     changePGhost(mqTabletMobile);
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     initUI();
@@ -67,5 +69,4 @@ document.addEventListener('DOMContentLoaded', function () {
     addProject();
 
     settingCallButtonForMobile();
-
 });

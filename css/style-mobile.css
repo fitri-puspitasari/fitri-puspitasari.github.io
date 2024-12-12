@@ -12,7 +12,6 @@
         height: fit-content !important;
     }
     .side-menu li {
-        /* width: fit-content; */
         margin-bottom: 0.778rem;
     }
     .project-detail__article__p-container {
@@ -194,15 +193,6 @@
         width: 209px;
         margin-block: 5px;
         padding: 3px;
-        /* border: 2px solid var(--blue);
-        border-radius: 5px; */
-    }
-    .project-detail__preview-images img {
-        /* width: 209px;
-        margin-block: 5px;
-        padding: 3px;
-        border: 2px solid var(--blue);
-        border-radius: 5px; */
     }
     .project-detail__preview-images__buttons {
         width: fit-content;
@@ -247,8 +237,6 @@
     .project-detail__exit-button {
         width: 15px;
         height: 15px;
-        /* bottom: calc(100% + 15px);
-        left: 0px; */
         & > img {
             width: 15px;
         }
@@ -261,7 +249,6 @@
         display: block;
         height: 100%;
     }
-
     .about__detail {
         display: block !important;
         margin-block: 0px !important;
@@ -269,9 +256,7 @@
         height: calc(100% - 77.5px);
         overflow-y: visible;
     }
-
     .about__detail-img {
-        /* flex-shrink: 0; */
         float: none;
         display: block;
         margin: 0 auto 1.611rem;
@@ -280,18 +265,14 @@
         background-position-y: 50%;
         border: 3px solid var(--blue);
     }
-
     .about__detail-text {
         font-size: 1.111rem;
         overflow-y: auto;
-        height: calc(var(--height-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 13rem) !important;
-        
+        height: calc(var(--height-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 13rem) !important; 
     }
-
     .about__contact h4 {
         display: none;
     }
-
     .about__contact__social-media-icons {
         position: absolute;
         top: calc(var(--margin-y-content) + var(--border-content-weight) + 4rem);
@@ -302,20 +283,16 @@
         scale: 0 1;
         opacity: 0;
         transition: all 0.15s ease-in;
-
     }
-
     .about__contact__social-media-icons img {
         width: 23px;
     }
-
     .about__contact__contact-button {
         display: block;
         position: absolute;
         top: calc(var(--margin-y-content) + var(--border-content-weight) + 6.5rem);
         right: calc(var(--margin-y-content) + var(--border-content-weight) - 0.5px);
         transition: all 0.15s ease-in;
-
     }
 
 
@@ -329,6 +306,5 @@
         font-size: 0.9rem;
         font-weight: 200;
     }
-    
 }
 

@@ -1,7 +1,4 @@
 @import url('./style.css');
-/* @import url('./style-tablet.css'); */
-/* @import url('./style-mobile.css'); */
-
 
 @media screen and (max-width: 1280px) {
     :root {
@@ -38,7 +35,6 @@
     .pacman-ghost {
         width: 65px;
         height: 65px;
-        /* background-size: cover; */
     }
 
     
@@ -48,11 +44,6 @@
     }
     
     /* ||-------------- CONTENT || SKILLS & EXPERIENCES */
-
-    /* .skills-and-experiences {
-        justify-content: start;
-        gap: 4rem;
-    } */
     .skills-and-experiences h2,
     .experiences h2 {
         margin-bottom: 2.25rem;
@@ -67,7 +58,6 @@
         height: 5rem;
         margin-bottom: 0.5rem;
     }
-    
     .skills-and-experiences {
         max-height: 563px;
         gap: 2rem;
@@ -84,11 +74,6 @@
     }   
     
     /* ||-------- MAIN || CONTENT || PROJECTS */
-     
-    /* .projects__folders {
-        gap: 0rem;
-        justify-content: space-between;
-    } */
     .folder-project img {
         width: 100px;
     }
@@ -103,15 +88,6 @@
         width: 209px;
         margin-block: 5px;
         padding: 3px;
-        /* border: 2px solid var(--blue);
-        border-radius: 5px; */
-    }
-    .project-detail__preview-images img {
-        /* width: 209px;
-        margin-block: 5px;
-        padding: 3px;
-        border: 2px solid var(--blue);
-        border-radius: 5px; */
     }
     .project-detail__preview-images__buttons {
         width: fit-content;
@@ -132,7 +108,6 @@
         font-size: 1.111rem;
     }
     .project-detail__article__p-container {
-        /* height: calc(var(--width-content) - (2 * var(--border-content-weight)) - (2 * var(--padding-content)) - 21rem); */
         height: fit-content;
         overflow-y: auto;
         margin-bottom: 10px;
@@ -157,8 +132,6 @@
     .project-detail__exit-button {
         width: 15px;
         height: 15px;
-        /* bottom: calc(100% + 15px);
-        left: 0px; */
         & > img {
             width: 15px;
         }
@@ -166,7 +139,6 @@
 
 
     /* ||-------- MAIN || CONTENT || ABOUT */
-
     .about__detail {
         display: block;
         margin-block: 1.5rem;
@@ -190,17 +162,12 @@
 
 
     /* ||-------- MAIN || SIDE-MENU */
-
     .side-menu button {
         font-size: 2rem;
     }
-    /* .side-menu li {
-        width: 13rem;
-    } */
 
 
     /* ||-------------- FOOTER */
-
     footer p {
         font-size: 1rem;
     }

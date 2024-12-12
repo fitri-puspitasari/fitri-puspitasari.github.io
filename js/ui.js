@@ -50,12 +50,10 @@ export function initUI() {
 function fixSideMenu() {
     const menuButtons = document.querySelectorAll('.side-menu__button')
     menuButtons.forEach(menuButton => {
-        // console.log(menuButton.childNodes[0])
         const button = menuButton.childNodes[0]
         menuButton.style.display = button.offsetWidth + 'px !important';
     })
 }
-
 
 export function showMainPage() {
     if (isGhostButtonClickable) {
@@ -89,7 +87,6 @@ export function showMainPage() {
             selectedGhost.style.display = 'none';
             yellowPacman.style.display = 'none';
         }, 5000);
-        
     }
 }
 
@@ -100,7 +97,6 @@ function hideAllContent() {
     aboutPage.className = 'about content-2 hidden';
     
     const projectDetails = document.querySelectorAll('.project-detail');
-    // console.log(projectDetails)
     if(projectDetails.length > 0) projectDetails.forEach(e => e.style.display = 'none')
 }
 
@@ -140,8 +136,6 @@ export function addProject() {
         buildProjectDetail(index);
     })
 
-    
-    // console.log(projectFoldersContainer)
     projectFoldersContainer.childNodes.forEach((folder, index) => {
         if (folder.tagName == "DIV") {
             const button = folder.children[0];
@@ -168,40 +162,7 @@ export function showProjectDetail(index) {
     })
 }
 
-// function addDragEvent(image, buttonParent, srcImage) {
-//     let dragStartX = null
-//     image.addEventListener("dragstart", function(e) {
-//         var clone = this.cloneNode(true);
-//         clone.style.opacity = 0;
-//         document.body.appendChild(clone);
-//         e.dataTransfer.setDragImage(clone, 0, 0);
-//         dragStartX = e.x;
-//     }, false);
-//     image.addEventListener("drag", (e) => {
-//         image.style.cursor = "grab !important";
-//     })
-//     image.addEventListener("dragend", (e) => {
-//         let dragEndX = e.x;
-//         if (dragEndX < dragStartX) {
-//             console.log('next')
-//             if (buttonPreviewImageActive < srcImage.length-1) {
-//                 buttonPreviewImageActive++
-//             }
-//         } else {
-//             console.log('back')
-//             if (buttonPreviewImageActive > 0) {
-//                 buttonPreviewImageActive--
-//             }
-//         }
-//         updatePreviewImage(buttonParent, buttonParent.childNodes[buttonPreviewImageActive], image)
-//     })
-// }
-
-
-
-// function playAutomaticSlide(image, buttonParent, srcImage) {
 function playAutomaticSlide(page, index) {
-    // console.log(index)
     const buttonParent = page.children[0].children[1];
     const image = page.children[0].children[0];
     
@@ -214,34 +175,6 @@ function playAutomaticSlide(page, index) {
         const button = buttonParent.childNodes[buttonPreviewImageActive];
         updatePreviewImage(buttonParent, button, image)
     }, 2000)
-
-
-    // let dragStartX = null
-    // image.addEventListener("dragstart", function(e) {
-    //     var clone = this.cloneNode(true);
-    //     clone.style.opacity = 0;
-    //     document.body.appendChild(clone);
-    //     e.dataTransfer.setDragImage(clone, 0, 0);
-    //     dragStartX = e.x;
-    // }, false);
-    // image.addEventListener("drag", (e) => {
-    //     image.style.cursor = "grab !important";
-    // })
-    // image.addEventListener("dragend", (e) => {
-    //     let dragEndX = e.x;
-    //     if (dragEndX < dragStartX) {
-    //         console.log('next')
-    //         if (buttonPreviewImageActive < srcImage.length-1) {
-    //             buttonPreviewImageActive++
-    //         }
-    //     } else {
-    //         console.log('back')
-    //         if (buttonPreviewImageActive > 0) {
-    //             buttonPreviewImageActive--
-    //         }
-    //     }
-    //     updatePreviewImage(buttonParent, buttonParent.childNodes[buttonPreviewImageActive], image)
-    // })
 }
 
 function fixExitButton(page) {
@@ -284,10 +217,6 @@ function buildProjectDetail(index) {
         imageButtons.appendChild(button)
 
     })
-
-    
-    // addDragEvent(image, imageButtons, data.images);
-    // addAutomaticSlide(image, imageButtons, data.images);
 
     const previewImage = document.createElement('div');
     previewImage.className = 'project-detail__preview-images';
@@ -406,31 +335,20 @@ function buildProjectDetail(index) {
     projectDetail.appendChild(exitButton);
 
     projectDetailPage.appendChild(projectDetail);
-
-
-    
 }
 
 function updatePreviewImage(buttonParent, button, image) {
-    // console.log(buttonParent, button)
-    // console.log(buttonParent.childNodes)
     buttonParent.childNodes.forEach(btn => {
-        // console.log(btn);
-        // console.log('------');
         btn.style.backgroundColor = 'var(--white)';
     })
     button.style.backgroundColor = 'var(--yellow)';
-    // console.log(button)
-    // console.log(button.getAttribute("data-srcimage"))
     image.setAttribute('src', button.getAttribute("data-srcimage"));
 }
 
 function fixPositionShortTable(shortTable) {
-    // console.log(shortTable)
     let hRef = null
     shortTable.childNodes.forEach((divShortTable, index) => {
         const w = divShortTable.childNodes[0].offsetWidth
-        // console.log(divShortTable.childNodes[0])
         divShortTable.style.width = w + 'px';
 
         const h = divShortTable.childNodes[0].offsetHeight
@@ -444,10 +362,20 @@ function fixPositionShortTable(shortTable) {
         const isPSingle = p.childNodes.length == 1;
         p.style.transform = `translate(calc(-50% + (0.5 * ${w}px)), ${isPSingle ? -180 : -149}% )`;
     })
-
-    
-
 }
+
+export function settingCallButtonForMobile() {
+    callButton.addEventListener('mouseover', () => callButton.children[0].setAttribute('src', "./assets/images/contact/contact-icon-hover.png"));
+    callButton.addEventListener('mouseout', () => callButton.children[0].setAttribute('src', "./assets/images/contact/contact-icon.png"));
+    callButton.addEventListener('click', () => {
+        callButton.style.opacity = 0;
+        callButton.style.transform = 'translateX(50%) scaleX(0)';
+
+        socmedIcons.style.scale = 1;
+        socmedIcons.style.opacity = 1;
+    });
+}
+
 
 
 /*
@@ -509,18 +437,3 @@ function fixPositionShortTable(shortTable) {
     <img src="./assets/images/x-button.png" alt="exit-button">
 </button>
 */
-
-export function settingCallButtonForMobile() {
-    callButton.addEventListener('mouseover', () => callButton.children[0].setAttribute('src', "./assets/images/contact/contact-icon-hover.png"));
-    callButton.addEventListener('mouseout', () => callButton.children[0].setAttribute('src', "./assets/images/contact/contact-icon.png"));
-    callButton.addEventListener('click', () => {
-        callButton.style.opacity = 0;
-        callButton.style.transform = 'translateX(50%) scaleX(0)';
-
-        socmedIcons.style.scale = 1;
-        socmedIcons.style.opacity = 1;
-    });
-
-    
-
-}
