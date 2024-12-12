@@ -50,7 +50,7 @@ export function initUI() {
 function fixSideMenu() {
     const menuButtons = document.querySelectorAll('.side-menu__button')
     menuButtons.forEach(menuButton => {
-        console.log(menuButton.childNodes[0])
+        // console.log(menuButton.childNodes[0])
         const button = menuButton.childNodes[0]
         menuButton.style.display = button.offsetWidth + 'px !important';
     })
@@ -201,7 +201,7 @@ export function showProjectDetail(index) {
 
 // function playAutomaticSlide(image, buttonParent, srcImage) {
 function playAutomaticSlide(page, index) {
-    console.log(index)
+    // console.log(index)
     const buttonParent = page.children[0].children[1];
     const image = page.children[0].children[0];
     
@@ -413,15 +413,15 @@ function buildProjectDetail(index) {
 
 function updatePreviewImage(buttonParent, button, image) {
     // console.log(buttonParent, button)
-    console.log(buttonParent.childNodes)
+    // console.log(buttonParent.childNodes)
     buttonParent.childNodes.forEach(btn => {
-        console.log(btn);
-        console.log('------');
+        // console.log(btn);
+        // console.log('------');
         btn.style.backgroundColor = 'var(--white)';
     })
     button.style.backgroundColor = 'var(--yellow)';
-    console.log(button)
-    console.log(button.getAttribute("data-srcimage"))
+    // console.log(button)
+    // console.log(button.getAttribute("data-srcimage"))
     image.setAttribute('src', button.getAttribute("data-srcimage"));
 }
 
