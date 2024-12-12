@@ -12,7 +12,6 @@ const contentButtons = document.querySelectorAll('.content-button');
 const menuButton = document.querySelector('.menu-button');
 
 export let activeContentIndex = null;
-
 let isPGhostDynamic = true;
 
 // media query

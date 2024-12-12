@@ -36,6 +36,11 @@ body {
     overflow: hidden;
 }
 
+.home__bg,
+.main {
+    overflow: hidden;
+}
+
 .game-text {
     font-family: var(--game-font);
 }
@@ -614,9 +619,9 @@ footer a {
     
     main {
         flex-direction: column;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         padding-block: var(--margin-y-content);
-        gap: 0 !important;
+        gap: calc(2 * var(--margin-y-content)) !important;
     }
 
     .content {
